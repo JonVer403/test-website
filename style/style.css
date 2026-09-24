@@ -3,8 +3,29 @@ body {
     
 }
 
-.homeButNav {
+header {
     background-color: gray;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: stretch;
+    border: 5px solid black;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navBarBut {
+    width: 90px;
+    height: 40px;
+}
+
+.homeButNav {
+    display: flex;
+    width: 100%;
 }
 
 .main {

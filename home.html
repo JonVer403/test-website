@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="script/scipt.js"></script>
 </head>
-<body>
+<body onload="readMoreReload()">
     <header>
         <nav class="homeButNav">
             <a href="index.html"><button class="homeButton">Home</button></a>
+        </nav>
+        <nav class="navBar">
+            <button class="navBarBut">Read More Test</button>
+            <a href="counter.html"><button class="navBarBut">Counter</button></a>
         </nav>
     </header>
     <section class="main">
@@ -19,10 +23,10 @@
             <p>
                 Yesterday i was walking up the stairs while listening to some relaxing music, Trout Mask Replica
                 by Captain Beefheart & His Magic Band to be specific, when suddenly an octopus fell out of my pocket.
-                Naturally<span id="dots">...</span><span id="more"> i was quiet shook and in a desparate attempt to fight
+                Naturally<span id="dots">...</span><span id="more"> i was quite shook and in a desparate attempt to fight
                 back i went to take of my shoe to use as a weapon. </span>
             </p>
-            <button onclick="myFunction()" id="myBtn">Read more</button>
+            <button onclick="readMore()" id="myBtn">Read more</button>
         </div>
         <div class="sect">
             <p>cheese cake farm</p>
