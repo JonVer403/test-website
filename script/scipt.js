@@ -26,3 +26,50 @@ function readMoreReload() {
 
 let count = 0;
 
+function updateCount() {
+    document.getElementById("count").innerHTML = count;
+}
+
+function updateSaved() {
+    let saved = localStorage.getItem("count");
+    document.getElementById("saved").innerHTML = saved;
+}
+
+function increaseCount() {
+    count++;
+    updateCount()
+}
+
+function increaseCountBy10() {
+    count += 10;
+    updateCount()
+}
+
+function decreaseCount() {
+    count--;
+    updateCount()
+}
+
+function decreaseCountBy10() {
+    count -= 10;
+    updateCount()
+}
+
+
+function resetCount() {
+    count = 0;
+    updateCount()
+}
+
+function saveCount() {
+    localStorage.setItem("count", count);
+    updateSaved()
+}
+
+function loadCount() {
+    let saved = localStorage.getItem("count");
+    if (saved !== null) {
+        count = Number(saved);
+    }
+    updateCount()
+}

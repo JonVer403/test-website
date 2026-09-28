@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="script/scipt.js"></script>
 </head>
-<body>
+<body onload="updateSaved()">
     <header>
         <nav class="homeButNav">
             <a href="index.html"><button class="homeButton">Home</button></a>
         </nav>
         <nav class="navBar">
-            <a href="home.html"><button class="navBarBut">Read More Test</button></a>
+            <a href="home.html"><button class="navBarBut">Read More</button></a>
             <button class="navBarBut">Counter</button>
         </nav>
     </header>
@@ -23,12 +23,16 @@
         </div>
         <div class="sect">
             <p id="count" style="font-size:40px;">0</p>
+            <p>saved number:</p>
+            <p id="saved">none</p>
 
-            <button onclick="increaseCount()">+</button>
-            <button onclick="decreaseCount()">-</button>
-            <button onclick="resetCount()">Reset</button>
-            <button onclick="saveCount()">Save</button>
-            <button onclick="loadCount()">Load</button>
+            <button class="CounterBut" onclick="increaseCount()">+1</button>
+            <button class="CounterBut" onclick="increaseCountBy10()">+10</button>
+            <button class="CounterBut" onclick="decreaseCount()">-1</button>
+            <button class="CounterBut" onclick="decreaseCountBy10()">-10</button>
+            <button class="CounterBut" onclick="resetCount()">Reset</button>
+            <button class="CounterBut" onclick="saveCount()">Save</button>
+            <button class="CounterBut" onclick="loadCount()">Load</button>
         </div>
     </section>
     <footer class="container">

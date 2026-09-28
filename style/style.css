@@ -1,7 +1,4 @@
-body {
-    background-color: rgb(234, 234, 234);
-    
-}
+/*Navigatie balk*/
 
 header {
     background-color: gray;
@@ -18,7 +15,7 @@ header {
     width: 100%;
 }
 
-.navBarBut {
+.navBarBut, .dropbtn {
     width: 90px;
     height: 40px;
 }
@@ -28,6 +25,13 @@ header {
     width: 100%;
 }
 
+/*Body*/
+
+body {
+    background-color: rgb(234, 234, 234);
+    
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -35,7 +39,15 @@ header {
     align-items: center;
 }
 
-div {
+.sect, .titel {
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    width: 500px;
+    margin-top: 10px;
+}
+
+.sectIndex {
     background-color: white;
     text-align: center;
     border-radius: 5px;
@@ -48,6 +60,8 @@ footer {
     bottom: 0;
 }
 
+/*Buttons*/
+
 .homeButton {
     background: transparent;
     border: none !important;
@@ -59,4 +73,51 @@ footer {
 
 .homeButton:hover {
     text-shadow: 2px 2px 8px rgba(40, 40, 40, 0.8);
+}
+
+.CounterBut {
+    margin-bottom: 10px;
+}
+
+#myBtn {
+    margin-bottom: 10px;
+
+}
+
+#indexButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Dropdown menu*/
+.dropdown-content {
+    display: none;
+    width: 120px;
+    right: 0;
+    position: absolute;
+    border: 3px solid lightgray;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    display: block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 4px;
+}
+
+.dropdown-content a:hover {
+    background-color: beige;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
