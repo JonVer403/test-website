@@ -28,6 +28,11 @@ let count = 0;
 
 function updateCount() {
     document.getElementById("count").innerHTML = count;
+    if (count >= 7000) {
+        document.getElementById("secretBut").style.display = "block";
+    } else {
+        document.getElementById("secretBut").style.display = "none";
+    }
 }
 
 function updateSaved() {

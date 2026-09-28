@@ -1,11 +1,11 @@
 /*Navigatie balk*/
 
 header {
-    background-color: gray;
+    background-color: darkgray;
     display: flex;
     justify-content: space-evenly;
     justify-items: stretch;
-    border: 5px solid black;
+    border: 5px solid rgb(84, 84, 84);
 }
 
 .navBar {
@@ -87,6 +87,18 @@ footer {
 #indexButton {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#secretBut {
+    display: none;
+    margin-bottom: 10px;
+}
+
+#secretBut button {
+    background-color: limegreen;
+    border: 4px solid red;
+    color: pink;
+    cursor: pointer;
 }
 
 /*Dropdown menu*/
