@@ -25,19 +25,29 @@ function readMoreReload() {
 }
 
 let count = 0;
+let secretUnlocked = false;
 
 function updateCount() {
     document.getElementById("count").innerHTML = count;
-    if (count >= 7000) {
-        document.getElementById("secretBut").style.display = "block";
-    } else {
-        document.getElementById("secretBut").style.display = "none";
+    if (secretUnlocked == false) {
+        if (count >= 100) {
+            document.getElementById("secretBut").style.display = "block";
+            secretUnlocked = true;
+        } else {
+            document.getElementById("secretBut").style.display = "none";
+        }
     }
+}
+
+function unlockSecret() {
+    document.getElementById("secretBut").style.display = "block";
+    secretUnlocked = true;
 }
 
 function updateSaved() {
     let saved = localStorage.getItem("count");
     document.getElementById("saved").innerHTML = saved;
+
 }
 
 function increaseCount() {

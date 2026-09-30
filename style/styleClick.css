@@ -1,3 +1,61 @@
+/*main layout*/
+
 body {
     background-color: green;
+}
+
+main {
+    display: flex;
+    justify-content: space-around
+}
+
+/*image layout*/
+
+#leftSec {
+    width: 35%;
+    position: relative;
+}
+
+#rightSec {
+    width: 35%;
+    position: relative;
+}
+
+#scoreDiv {
+    text-align: center;
+}
+
+#clickBtn {
+    width: 100%;
+}
+
+/*upgrades layout*/
+
+#upgrades {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*dropdown upgrades*/
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 99999999;
+    background-color: white;
+    border: 3px solid lightgray;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropdown-content:not([hidden]) {
+    display: block;
+    width: 100px;
 }
