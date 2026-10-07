@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="script/scipt.js"></script>
 </head>
-<body>
+<body onload="startTime()">
     <header>
         <nav class="homeButNav">
             <a href="index.html"><button class="homeButton">Home</button></a>
@@ -22,6 +22,9 @@
                 </div>
             </div>
         </nav>
+        <nav class="navTime">
+            <div id="clock">time</div>
+        </nav>
     </header>
     <section class="main">
         <div class="titel">
@@ -35,7 +38,7 @@
             <a href="home.html"><button id="indexButton">Enter</button></a>
         </div>
     </section>
-    <footer class="container">
+    <footer class="footer">
         <p>© 2026 Jon Verhoeven – Software Development Student</p>
     </footer>
 </body>

@@ -97,6 +97,7 @@ function clickOneCheck() {
             document.getElementById("clickOne").hidden = true;
             document.getElementById("clickOneDropdown").hidden = true;
             score -= 50;
+            updateCount()
             clickActivate()
             localStorage.setItem("clickOnePurchased", true);
         }
@@ -107,10 +108,11 @@ function clickTwoCheck() {
     if (document.getElementById("clickTwo").hidden == false) {
         if (score >= 200) {
             document.getElementById("clickTwo").hidden = true;
-        document.getElementById("clickTwoDropdown").hidden = true;
-        score -= 200;
-        clickActivate()
-        localStorage.setItem("clickTwoPurchased", true);
+            document.getElementById("clickTwoDropdown").hidden = true;
+            score -= 200;
+            updateCount()
+            clickActivate()
+            localStorage.setItem("clickTwoPurchased", true);
         }
     }
 }
@@ -121,6 +123,7 @@ function clickThreeCheck() {
             document.getElementById("clickThree").hidden = true;
             document.getElementById("clickThreeDropdown").hidden = true;
             score -= 500;
+            updateCount()
             clickActivate()
             localStorage.setItem("clickThreePurchased", true);
         }
@@ -138,6 +141,7 @@ function autoOneCheck() {
             document.getElementById("autoOne").hidden = true;
             document.getElementById("autoOneDropdown").hidden = true;
             score -= 150;
+            updateCount()
             autoOneActivate()
             localStorage.setItem("autoOnePurchased", true);
         }
@@ -150,6 +154,7 @@ function autoTwoCheck() {
             document.getElementById("autoTwo").hidden = true;
             document.getElementById("autoTwoDropdown").hidden = true;
             score -= 300;
+            updateCount()
             autoTwoActivate()
             localStorage.setItem("autoTwoPurchased", true);
         }
@@ -161,6 +166,7 @@ function autoThreeCheck() {
             document.getElementById("autoThree").hidden = true;
             document.getElementById("autoThreeDropdown").hidden = true;
             score -= 500;
+            updateCount()
             autoThreeActivate()
             localStorage.setItem("autoThreePurchased", true);
         }
