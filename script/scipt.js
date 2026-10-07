@@ -52,7 +52,7 @@ function unlockSecret() {
 function updateSaved() {
     let saved = localStorage.getItem("count");
     document.getElementById("saved").innerHTML = saved;
-
+    startTime()
 }
 
 function increaseCount() {
@@ -94,6 +94,21 @@ function loadCount() {
     updateCount()
 }
 
+function updateAlarmPic() {
+    const alarmPic = document.getElementById("alarmPic");
+    if (!alarmPic) return;
+
+    const now = new Date();
+    const alarmHour = 12;   // Set the hour (24-hour format)
+    const alarmMinute = 12; // Set the minute
+
+    const isAlarmTime =
+        now.getHours() === alarmHour &&
+        now.getMinutes() === alarmMinute;
+
+    alarmPic.style.display = isAlarmTime ? "block" : "none";
+}
+
 function startTime() {
     const today = new Date();
     let h = today.getHours();
@@ -101,7 +116,8 @@ function startTime() {
     let s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+    document.querySelector(".clock").innerHTML =  h + ":" + m + ":" + s;
+    updateAlarmPic();
     setTimeout(startTime, 1000);
 }
 
